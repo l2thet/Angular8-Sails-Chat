@@ -2,12 +2,12 @@
   "name": "Angular2-Sails-Chat-Example",
   "private": true,
   "version": "0.1.0",
-  "description": "a Sails application",
+  "description": "A Sails application using Angular2",
   "keywords": [
     "sails",
     "angular2",
     "barebone",
-    "chat"
+    "chat-barebone"
   ],
   "dependencies": {
     "ejs": "2.3.4",
@@ -56,8 +56,12 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/tstProject.git"
+    "url": "git://github.com/l2thet/Angular2-Sails-Chat.git"
   },
+  "bugs": {
+    "url": "https://github.com/l2thet/Angular2-Sails-Chat/issues"
+  },
+  "homepage": "https://github.com/l2thet/Angular2-Sails-Chat#readme",
   "author": "L2thet",
   "license": "CC0-1.0"
 }
