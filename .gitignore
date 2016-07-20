@@ -71,7 +71,6 @@ bower_components
 
 
 
-
 ################################################
 # Sails.js / Waterline / Grunt
 #
@@ -116,3 +115,4 @@ npm-debug.log
 nbproject
 .idea
 .node_history
+typings
