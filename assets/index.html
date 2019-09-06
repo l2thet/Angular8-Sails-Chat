@@ -2,25 +2,16 @@
 <html>
     <head>
         <title>Message Example</title>
-        <link href="styles/bootstrap.min.css" rel="stylesheet"></link>
-        <!-- 1. Load libraries -->
-        <!-- Polyfill(s) for older browsers -->
-        <script src="js/dependencies/shim.min.js"></script>
-        <script src="js/dependencies/zone.js"></script>
-        <script src="js/dependencies/Reflect.js"></script>
-        <script src="js/dependencies/system.src.js"></script>
-        <script src="js/dependencies/sails.io.js"></script>
-        <script>
-            //io.sails.autoConnect = false;//don't connect in global, instead connect on the service initiation
-        </script>
-        <!-- 2. Configure SystemJS -->
-        <script src="js/dependencies/systemjs.config.js"></script>
-        <script>
-        System.import('app/main').catch(function(err){ console.error(err); });
-        </script>
     </head>
 <body>
-    <hw-app>App is loading...</hw-app>
 </body>
-
+    <app-main>Loading...</app-main>
+    <script src="js/dependencies/sails.io.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="js/dependencies/systemjs.config.js"></script>
+    <script>
+        System.import('./app/main.js').catch(function(err){
+            console.error(err);
+        });
+    </script>
 </html>

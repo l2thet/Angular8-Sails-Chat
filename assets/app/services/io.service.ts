@@ -1,16 +1,16 @@
-import {Injectable} from '@angular/core'
-import { Observable } from 'rxjs/Observable'
-import { Subject } from 'rxjs/Subject'
+import {Injectable} from '@angular/core';
+import { observable, Subject } from 'rxjs';
 
 @Injectable()
 export class ioService {
     private _ioMessage$: Subject<{}>;
+
     constructor() {
         this._ioMessage$ = <Subject<{}>>new Subject();
         this.registerSailsListener();
     }
 
-    get ioMessage$() {
+    getMessage() {
         return this._ioMessage$.asObservable();
     }
 

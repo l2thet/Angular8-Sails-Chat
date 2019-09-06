@@ -1,23 +1,22 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core'
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ioService } from './services/io.service'
 
 @Component({
-    selector: 'hw-app',
-    templateUrl: "./app/app.component.html",
-    providers: [ioService],
-    changeDetection: ChangeDetectionStrategy.Default
+  selector: 'app-main',
+  templateUrl:"./app/app.component.html",
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class AppComponent implements OnInit {
     private _ioServiceMessages: Array<{}>;
     messageToSend: string;
+
     constructor(private _ioService: ioService, private _changeDetector: ChangeDetectorRef) {
         this._ioServiceMessages = new Array<{}>();
         this.messageToSend = "";
     }
 
     ngOnInit(): void {
-        //register to the observable
-        this._ioService.ioMessage$
+        this._ioService.getMessage()
             .subscribe(message => {
                 let messageContent = "";
                 messageContent = message["message"];
@@ -28,7 +27,15 @@ export class AppComponent implements OnInit {
             });
     }
 
-    sendMessage(): void {
+    subscribeClick():void{
+        this._ioService.subscribeToSails();
+    }
+
+    unsubClick():void{
+        this._ioService.unsubscribeToSails();
+    }
+
+    sendMessage():void{
         if (this.messageToSend) {
             let messageObject = {
                 message: this.messageToSend
@@ -36,14 +43,5 @@ export class AppComponent implements OnInit {
             this.messageToSend = "";
             this._ioService.sendMessage(messageObject);
         }
-    }
-
-    subscribeClick(): void {
-        //submit a change to the observable through the service
-        this._ioService.subscribeToSails();
-    }
-
-    unsubClick(): void {
-        this._ioService.unsubscribeToSails();
     }
 }
