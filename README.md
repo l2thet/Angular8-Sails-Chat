@@ -3,7 +3,7 @@
 a [Sails](http://sailsjs.org) application using [Angular2](https://angular.io/)
 
 # Introduction
-This project is intended as an example of how to use Sails with Angular2.
+This project is intended as an example of how to use Sails with Angular8.
 
 # Setup
 After performing a git from github, open a prompt in the 'Angular2-Sails-Chat' folder and type 'npm install'.
