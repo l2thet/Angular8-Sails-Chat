@@ -1,6 +1,6 @@
-# Angular2-Sails-Chat
+# Angular8-Sails-Chat
 
-a [Sails](http://sailsjs.org) application using [Angular2](https://angular.io/)
+a [Sails](http://sailsjs.org) application using [Angular8](https://angular.io/)
 
 # Introduction
 This project is intended as an example of how to use Sails with Angular8.
