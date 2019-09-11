@@ -1,0 +1,48 @@
+{
+  "name": "angular-8-sails-chat",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@angular/common": "8.2.1",
+    "@angular/compiler": "8.2.1",
+    "@angular/core": "8.2.1",
+    "@angular/forms": "8.2.1",
+    "@angular/platform-browser": "8.2.1",
+    "@angular/platform-browser-dynamic": "8.2.1",
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "core-js": "2.6.0",
+    "grunt": "1.0.4",
+    "rxjs": "6.5.2",
+    "sails": "^1.2.3",
+    "sails-hook-grunt": "^4.0.0",
+    "sails-hook-orm": "^2.1.1",
+    "sails-hook-sockets": "^2.0.0",
+    "systemjs": "0.21.0",
+    "zone.js": "0.10.1"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "typescript": "^3.6.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
+    "build": "tsc"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/angular-8-sails-chat.git"
+  },
+  "author": "anonymous node/sails user",
+  "license": "",
+  "engines": {
+    "node": "^10.16"
+  }
+}

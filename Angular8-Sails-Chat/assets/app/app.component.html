@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="well">
+        <button class="btn btn-default" (click)="subscribeClick()">Join Channel.</button>
+        <button class="btn btn-default" (click)="unsubClick()">Leave Channel.</button>
+        <div class="input-group col-md-6">
+            <input type="text" class="form-control" (keyup.enter)="sendMessage()" [(ngModel)]="messageToSend" autofocus placeholder="Submit message..."
+            />
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="button" (click)="sendMessage()">Submit</button>
+            </div>
+        </div>
+        <div class="well" style="border:1px solid black;max-height:150px;min-height:150px;overflow-y:auto">
+            <div *ngFor="let message of _ioServiceMessages">
+                Message:<span class="text-info">{{message.message}}</span>
+            </div>
+        </div>
+    </div>
+</div>

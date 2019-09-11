@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Message Example</title>
+    </head>
+<body>
+</body>
+    <app-main>Loading...</app-main>
+    <script src="dependencies/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="dependencies/sails.io.js"></script>
+    <script src="dependencies/systemjs.config.js"></script>
+    <script>
+        System.import("./app/main.js").catch(function(err){
+            console.error(err);
+        });
+    </script>
+</html>
