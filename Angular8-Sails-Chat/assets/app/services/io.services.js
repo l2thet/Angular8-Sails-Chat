@@ -22,7 +22,6 @@ var ioService = /** @class */ (function () {
     ioService.prototype.registerSailsListener = function () {
         var _this = this;
         self["io"].socket.on('message', function (data) {
-            console.log(data);
             _this._ioMessage$.next(data);
         });
     };
