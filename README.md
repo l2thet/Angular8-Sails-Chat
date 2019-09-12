@@ -6,7 +6,7 @@ a [Sails](http://sailsjs.org) application using [Angular8](https://angular.io/)
 This project is intended as an example of how to use Sails with Angular8.
 
 # Setup
-After performing a git from github, open a prompt in the 'Angular2-Sails-Chat' folder and type 'npm install'.
+After performing a git from github, open a prompt in the 'Angular8-Sails-Chat' folder and type 'npm install'.
 Once this is complete, type 'npm start'.
 Open a browser and naviaget to http://localhost:1337
 
